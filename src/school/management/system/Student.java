@@ -40,6 +40,42 @@ public class Student {
 			this.grade = grade;
 		}
 		
+		
+		/**
+		 * feespaid = 10000 + 5000 + 150000
+		 * Add the fees to the fees paid.
+		 * The school is going to receive the funds.
+		 * @param fees
+		 */
+		public void payFees(int fees) {
+			feesPaid += fees;
+			School.updateTotalMoneyEarned(feesPaid);
+		}
+		
+		public String getName() {
+			return name;
+		}
+		
+		public int getId() {
+			return id;
+		}
+		
+		public int getGrade() {
+			return grade;
+		}
+		
+		public int getFeesPaid() {
+			return feesPaid;
+		}
+		
+		
+		public int getFeesTotal() {
+			return feesTotal;
+		}
+		
+		public int getRemainingFees() {
+			return feesTotal-feesPaid;
+		}
 }
 
 
