@@ -12,8 +12,8 @@ public class School {
 
 	private List<Teacher> teachers;
 	private List<Student> students;
-	private int totalMoneyEarned;
-	private int totalMoneySpent;
+	private static int totalMoneyEarned;
+	private static int totalMoneySpent;
 	
 	
 	public School(List<Teacher> teachers, List<Student> students) {
@@ -49,7 +49,7 @@ public class School {
 		return totalMoneyEarned;
 	}
 	
-	public void static updateTotalMoneyEarned(int moneyEarned) {
+	public static void updateTotalMoneyEarned(int moneyEarned) {
 		totalMoneyEarned += moneyEarned;
 	}
 	
@@ -57,8 +57,8 @@ public class School {
 		return totalMoneySpent;
 	}
 	 
-	public void static updateTotalMoneySpent(int moneySpent) {
-		totalMoneySpent += moneySpent;
+	public static void updateTotalMoneySpent(int moneySpent) {
+		totalMoneySpent -= moneySpent;
 	}
 }
  
